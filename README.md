@@ -5,12 +5,12 @@ Magicorn made Terraform Module for AWS Provider
 ```
 module "s3" {
   source         = "magicorntech/s3/aws"
-  version        = "0.0.3"
+  version        = "0.0.4"
   tenant         = var.tenant
   name           = var.name
   environment    = "test"
   encryption     = true # 1
-  kms_key_id     = var.s3_key_id
+  kms_key_id     = var.s3_key_id[0]
 
   # S3 Configuration
   bucket_name   = "testbucket"
@@ -20,6 +20,14 @@ module "s3" {
     enabled    = false
     mfa_delete = false
   }
+
+  cors_rule = jsonencode([{
+    allowed_methods = ["GET", "HEAD"]
+    allowed_origins = ["*"]
+    allowed_headers = ["*"]
+    expose_headers  = ["x-amz-meta-custom-header"]
+    max_age_seconds = "900"
+  }])
 }
 ```
 
