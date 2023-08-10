@@ -9,7 +9,7 @@ module "s3" {
   tenant         = var.tenant
   name           = var.name
   environment    = "test"
-  encryption     = true # 1
+  encryption     = true ## 1
   kms_key_id     = var.s3_key_id[0]
 
   # S3 Configuration
