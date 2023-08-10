@@ -6,5 +6,5 @@ locals {
 }
 
 resource "random_id" "shuffle" {
-  byte_length = 4 # default 8
+  byte_length = 1 # default 8
 }
