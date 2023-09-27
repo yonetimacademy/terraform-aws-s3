@@ -4,13 +4,14 @@ Cloud&Cloud made Terraform Module for AWS Provider
 --
 ```
 module "s3" {
-  source         = "yonetimacademy/s3/aws"
-  version        = "0.0.1"
-  tenant         = var.tenant
-  name           = var.name
-  environment    = "test"
-  encryption     = true ## 1
-  kms_key_id     = var.s3_key_id[0]
+  source             = "yonetimacademy/s3/aws"
+  version            = "0.0.1"
+  tenant             = var.tenant
+  name               = var.name
+  environment        = "test"
+  encryption         = true ## 1
+  kms_key_id         = var.s3_key_id[0]
+  static_web_hosting = false
 
   # S3 Configuration
   bucket_name   = "testbucket"
