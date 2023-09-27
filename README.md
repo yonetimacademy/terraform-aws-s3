@@ -33,4 +33,4 @@ module "s3" {
 ```
 
 ## Notes
-1) Works better with yonetimacademy-aws-kms module.
+1) Works better with yonetimacademy-aws-kms module...
