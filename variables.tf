@@ -7,3 +7,6 @@ variable "bucket_name" {}
 variable "force_destroy" {}
 variable "versioning" {}
 variable "cors_rule" {}
+variable "static_web_hosting" {
+  default = false
+}

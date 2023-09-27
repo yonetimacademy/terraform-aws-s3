@@ -18,4 +18,5 @@ resource "aws_s3_bucket_website_configuration" "example" {
   #     replace_key_prefix_with = "documents/"
   #   }
   # }
+  
 }
